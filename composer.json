@@ -1,0 +1,62 @@
+{
+  "name": "thuraaung2493/laravel-make-files-tools",
+  "description": "A set of tools to make Dtos, Actions and Services classes in Laravel",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "thuraaung2493",
+      "email": "thuraaung2493@gmail.com",
+      "role": "Developer",
+      "homepage": "http://thuraaung2493.github.io/"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Thuraaung\\MakeFiles\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Thuraaung\\MakeFiles\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "illuminate/console": "^10.2",
+    "illuminate/support": "^10.2",
+    "thecodingmachine/phpstan-safe-rule": "^1.2"
+  },
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "require-dev": {
+    "laravel/pint": "^1.10",
+    "orchestra/testbench": "^8.5.1",
+    "pestphp/pest": "^1.23",
+    "pestphp/pest-plugin-laravel": "^1.4"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Thuraaung\\MakeFiles\\Providers\\PackageServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "test": "./vendor/bin/pest",
+    "analyse": "./vendor/bin/phpstan analyse --memory-limit=256m",
+    "prepare": [
+      "./vendor/bin/pest",
+      "./vendor/bin/pint",
+      "./vendor/bin/phpstan analyse --memory-limit=256m"
+    ]
+  }
+}

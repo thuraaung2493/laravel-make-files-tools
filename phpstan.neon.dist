@@ -1,0 +1,10 @@
+
+parameters:
+  checkMissingIterableValueType: false
+  inferPrivatePropertyTypeFromConstructor: true
+  level: 9
+  paths:
+    - src
+
+includes:
+  - vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
