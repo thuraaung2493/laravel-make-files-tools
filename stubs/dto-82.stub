@@ -12,7 +12,7 @@ final readonly class {{ class }} implements DataObjectContract
         //
     ) {}
 
-    public function of(array $attributes): {{ class }}
+    public static function of(array $attributes): {{ class }}
     {
         return new {{ class }}(
             //
