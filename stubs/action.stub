@@ -2,11 +2,9 @@
 
 declare(strict_types=1);
 
-use Thuraaung\MakeFiles\Contracts\ActionContract;
-
 namespace {{ namespace }};
 
-final class {{ class }} implements ActionContract
+final class {{ class }}
 {
     public function handle(): mixed
     {
