@@ -12,6 +12,13 @@ final class {{ class }} implements DataObjectContract
         //
     ) {}
 
+    public function of(array $attributes): {{ class }}
+    {
+        return new {{ class }}(
+            //
+        );
+    }
+
     public function toArray(): array
     {
         return [];
