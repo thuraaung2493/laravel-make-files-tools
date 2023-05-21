@@ -6,8 +6,7 @@ namespace Thuraaung\MakeFiles\Contracts;
 
 interface DataObjectContract
 {
-    /**
-     * @return array<string,mixed>
-     */
+    public function of(array $attributes): DataObjectContract;
+
     public function toArray(): array;
 }
