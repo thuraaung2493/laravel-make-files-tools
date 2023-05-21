@@ -8,7 +8,7 @@ use Thuraaung\MakeFiles\Contracts\DataObjectContract;
 
 final readonly class {{ class }} implements DataObjectContract
 {
-    public function __construct(
+    public static function __construct(
         //
     ) {}
 
