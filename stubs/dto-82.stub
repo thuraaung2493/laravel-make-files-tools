@@ -11,7 +11,7 @@ final readonly class {{ class }} implements DataObjectContract
     public function __construct(
         //
     ) {}
-
+    
     /**
      * @param array $attributes
      *

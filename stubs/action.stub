@@ -6,7 +6,7 @@ namespace {{ namespace }};
 
 final class {{ class }}
 {
-    public function handle(): void
+    public function handle(): mixed
     {
         //
     }
