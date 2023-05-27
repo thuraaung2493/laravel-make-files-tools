@@ -11,14 +11,22 @@ final readonly class {{ class }} implements DataObjectContract
     public function __construct(
         //
     ) {}
-
+    
+    /**
+     * @param array $attributes
+     *
+     * @return {{ class }}
+     */
     public static function of(array $attributes): {{ class }}
     {
         return new {{ class }}(
-            //
+
         );
     }
 
+    /**
+     * @return array<string,mixed>
+     */
     public function toArray(): array
     {
         return [];

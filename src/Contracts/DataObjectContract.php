@@ -6,7 +6,15 @@ namespace Thuraaung\MakeFiles\Contracts;
 
 interface DataObjectContract
 {
-    public static function of(array $attributes): DataObjectContract;
+    /**
+     * @param array $attributes
+     *
+     * @return self
+     */
+    public static function of(array $attributes): self;
 
+    /**
+     * @return array<string,mixed>
+     */
     public function toArray(): array;
 }
