@@ -10,17 +10,17 @@ use Thuraaung\MakeFiles\Console\Commands\ServiceClassMakeCommand;
 use function Pest\Laravel\artisan;
 use function PHPUnit\Framework\assertTrue;
 
-it('can run the command successfully', function () {
+it('can run the command successfully', function (): void {
     artisan(ServiceClassMakeCommand::class, ['name' => 'Test'])
         ->assertSuccessful();
 });
 
-it('can run the command successfully when --pest option include', function () {
+it('can run the command successfully when --pest option include', function (): void {
     artisan(ServiceClassMakeCommand::class, ['name' => 'Tests', '--pest' => true])
         ->assertSuccessful();
 });
 
-it('create the service class when called', function (string $class) {
+it('create the service class when called', function (string $class): void {
     artisan(
         ServiceClassMakeCommand::class,
         ['name' => $class]
@@ -28,7 +28,7 @@ it('create the service class when called', function (string $class) {
 
     assertTrue(
         File::exists(
-            path: app_path("Services/$class.php")
+            path: app_path("Services/{$class}.php")
         )
     );
 })->with('services');

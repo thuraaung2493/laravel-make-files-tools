@@ -1,6 +1,6 @@
 {
   "name": "thuraaung2493/laravel-make-files-tools",
-  "description": "A set of tools to make Dtos, Actions and Services classes in Laravel",
+  "description": "A small cli tools to create DTO, Action and Service classes for Laravel project.",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -37,6 +37,7 @@
   },
   "require-dev": {
     "laravel/pint": "^1.10",
+    "nunomaduro/mock-final-classes": "^1.2",
     "orchestra/testbench": "^8.5.1",
     "pestphp/pest": "^1.23",
     "pestphp/pest-plugin-laravel": "^1.4"
@@ -51,6 +52,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "scripts": {
+    "pint": "./vendor/bin/pint",
     "test": "./vendor/bin/pest",
     "analyse": "./vendor/bin/phpstan analyse --memory-limit=256m",
     "prepare": [
